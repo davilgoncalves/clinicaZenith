@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#293F4B">
+  <meta name="description" content="Entre em contato com a Zenith Clínica Neurológica.">
+  <title>Contato | Zenith — Clínica Neurológica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS principal do projeto -->
+  <link rel="stylesheet" href="../static/css/style.css?v=2">
+
+
+
+  <!-- Scripts existentes -->
+  <script src="../static/js/main.js" defer></script>
+  <script src="../static/js/formulario.js" defer></script>
+</head>
+
+<body class="contact-page">
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+
+    <a class="brand" href="../index.html" aria-label="Zenith — página inicial">
+      <img src="../static/img/logo.png" alt="Zenith Clínica Neurológica">
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-controls="navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navigation" id="navigation" aria-label="Navegação principal">
+      <a class="nav-link" href="../index.html#sobre">A clínica</a>
+      <a class="nav-link" href="../index.html#especialidades">Especialidades</a>
+      <a class="nav-link" href="../index.html#equipe">Profissionais</a>
+      <a class="nav-link" href="../index.html#duvidas">Dúvidas</a>
+      <a class="nav-link nav-contact active" href="contato.html" aria-current="page">
+        Contato
+      </a>
+    </nav>
+
+  </header>
+
+  <main id="conteudo">
+
+    <!-- FORMULÁRIO E INFORMAÇÕES -->
+    <section class="contact-main" id="agendamento">
+
+      <div class="contact-intro reveal">
+      <br>
+      <br>
+      <br>
+
+        <h2>
+          Conte como podemos
+          <em>ajudar.</em>
+        </h2>
+
+        <p>
+          Preencha os campos abaixo para demonstrar como funciona
+          o formulário de contato. Nesta versão, os dados não são
+          enviados nem armazenados.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- INFORMAÇÕES DE CONTATO -->
+        <aside class="contact-info reveal" aria-labelledby="contact-info-title">
+
+          <div>
+            <h3 id="contact-info-title">
+              Um atendimento que começa pela escuta.
+            </h3>
+
+            <p>
+              Estamos disponíveis para orientar você sobre os
+              próximos passos e as informações necessárias
+              para o atendimento.
+            </p>
+          </div>
+
+          <div class="contact-info-list">
+
+            <div class="contact-info-item">
+              <span class="contact-info-icon" aria-hidden="true">✉</span>
+
+              <div>
+                <strong>E-mail</strong>
+                <span>Entre em contato com a equipe da clínica.</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-info-icon" aria-hidden="true">◷</span>
+
+              <div>
+                <strong>Horários</strong>
+                <span>Consulte a disponibilidade de atendimento.</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-info-icon" aria-hidden="true">⌖</span>
+
+              <div>
+                <strong>Localização</strong>
+                <span>Consulte o endereço oficial da clínica.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="contact-info-note">
+            Para sua privacidade, evite incluir informações médicas
+            ou outros dados sensíveis no formulário.
+          </p>
+
+        </aside>
+
+        <!-- FORMULÁRIO -->
+        <section
+          class="appointment-card reveal"
+          aria-labelledby="form-title"
+        >
+
+          <h3 id="form-title">Solicite um contato</h3>
+
+          <p class="form-description">
+            Preencha os dados abaixo. Os campos marcados com *
+            são obrigatórios.
+          </p>
+
+          <form id="appointment-form" novalidate>
+
+            <div class="form-grid">
+
+              <div class="form-field">
+                <label for="name">Nome completo *</label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  minlength="2"
+                  required
+                  placeholder="Como podemos chamar você?"
+                  aria-describedby="name-error"
+                >
+
+                <small class="field-error" id="name-error"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Telefone com DDD *</label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                  placeholder="(00) 00000-0000"
+                  aria-describedby="phone-error"
+                >
+
+                <small class="field-error" id="phone-error"></small>
+              </div>
+
+              <div class="form-field full">
+                <label for="email">
+                  E-mail <span>(opcional)</span>
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="voce@exemplo.com"
+                  aria-describedby="email-error"
+                >
+
+                <small class="field-error" id="email-error"></small>
+              </div>
+
+              <div class="form-field full">
+                <label for="reason">Motivo do contato</label>
+
+                <select id="reason" name="reason">
+                  <option value="">Selecione uma opção</option>
+                  <option value="agendamento">Solicitar agendamento</option>
+                  <option value="atendimento">Informações sobre atendimento</option>
+                  <option value="geral">Informações gerais</option>
+                </select>
+              </div>
+
+            </div>
+
+            <label class="consent-row" for="consent">
+
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                required
+                aria-describedby="consent-error"
+              >
+
+              <span>
+                Autorizo o uso dos dados informados exclusivamente
+                para retorno sobre esta solicitação. *
+              </span>
+
+            </label>
+
+            <small class="field-error" id="consent-error"></small>
+
+            <button class="button submit-button" type="submit">
+              Validar solicitação
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <p class="form-footnote">
+              Esta é uma demonstração. Os dados não são enviados
+              nem armazenados.
+            </p>
+
+            <div
+              id="form-feedback"
+              class="form-feedback"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+
+          </form>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+
+    <a class="brand" href="../index.html" aria-label="Zenith — página inicial">
+      <img src="../static/img/logo.png" alt="Zenith Clínica Neurológica">
+    </a>
+
+    <span>
+      © <span id="year"></span> Zenith Clínica Neurológica
+    </span>
+
+    <a href="#conteudo">Voltar ao topo ↑</a>
+
+  </footer>
+
+</body>
+</html>
